@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PRUEBA_GAP_DBModelStoreContainer" CdmEntityContainer="PRUEBA_GAP_DBEntities">
+    <EntitySetMapping Name="STUDENTs">
+      <EntityTypeMapping TypeName="PRUEBA_GAP_DBModel.STUDENT">
+        <MappingFragment StoreEntitySet="STUDENT">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUBJECTs">
+      <EntityTypeMapping TypeName="PRUEBA_GAP_DBModel.SUBJECT">
+        <MappingFragment StoreEntitySet="SUBJECT">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STUDENT_SUBJECT">
+      <EntityTypeMapping TypeName="PRUEBA_GAP_DBModel.STUDENT_SUBJECT">
+        <MappingFragment StoreEntitySet="STUDENT_SUBJECT">
+          <ScalarProperty Name="grade" ColumnName="grade" />
+          <ScalarProperty Name="subject_id" ColumnName="subject_id" />
+          <ScalarProperty Name="student_id" ColumnName="student_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

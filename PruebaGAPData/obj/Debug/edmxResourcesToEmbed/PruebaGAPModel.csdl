@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PRUEBA_GAP_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="STUDENT">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="STUDENT_SUBJECT" Relationship="Self.FK_STUDENT_SUBJECT_STUDENT" FromRole="STUDENT" ToRole="STUDENT_SUBJECT" />
+  </EntityType>
+  <EntityType Name="STUDENT_SUBJECT">
+    <Key>
+      <PropertyRef Name="student_id" />
+      <PropertyRef Name="subject_id" />
+    </Key>
+    <Property Name="student_id" Type="Int32" Nullable="false" />
+    <Property Name="subject_id" Type="Int32" Nullable="false" />
+    <Property Name="grade" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <NavigationProperty Name="STUDENT" Relationship="Self.FK_STUDENT_SUBJECT_STUDENT" FromRole="STUDENT_SUBJECT" ToRole="STUDENT" />
+    <NavigationProperty Name="SUBJECT" Relationship="Self.FK_STUDENT_SUBJECT_SUBJECT" FromRole="STUDENT_SUBJECT" ToRole="SUBJECT" />
+  </EntityType>
+  <EntityType Name="SUBJECT">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="STUDENT_SUBJECT" Relationship="Self.FK_STUDENT_SUBJECT_SUBJECT" FromRole="SUBJECT" ToRole="STUDENT_SUBJECT" />
+  </EntityType>
+  <Association Name="FK_STUDENT_SUBJECT_STUDENT">
+    <End Role="STUDENT" Type="Self.STUDENT" Multiplicity="1" />
+    <End Role="STUDENT_SUBJECT" Type="Self.STUDENT_SUBJECT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STUDENT">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="STUDENT_SUBJECT">
+        <PropertyRef Name="student_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STUDENT_SUBJECT_SUBJECT">
+    <End Role="SUBJECT" Type="Self.SUBJECT" Multiplicity="1" />
+    <End Role="STUDENT_SUBJECT" Type="Self.STUDENT_SUBJECT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUBJECT">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="STUDENT_SUBJECT">
+        <PropertyRef Name="subject_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PRUEBA_GAP_DBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="STUDENTs" EntityType="Self.STUDENT" />
+    <EntitySet Name="STUDENT_SUBJECT" EntityType="Self.STUDENT_SUBJECT" />
+    <EntitySet Name="SUBJECTs" EntityType="Self.SUBJECT" />
+    <AssociationSet Name="FK_STUDENT_SUBJECT_STUDENT" Association="Self.FK_STUDENT_SUBJECT_STUDENT">
+      <End Role="STUDENT" EntitySet="STUDENTs" />
+      <End Role="STUDENT_SUBJECT" EntitySet="STUDENT_SUBJECT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STUDENT_SUBJECT_SUBJECT" Association="Self.FK_STUDENT_SUBJECT_SUBJECT">
+      <End Role="SUBJECT" EntitySet="SUBJECTs" />
+      <End Role="STUDENT_SUBJECT" EntitySet="STUDENT_SUBJECT" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

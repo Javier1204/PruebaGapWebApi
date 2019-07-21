@@ -1,0 +1,14 @@
+C:\Users\1570367\source\repos\PruebaGAPWebApi\PruebaGAPData\bin\Debug\PruebaGAPData.dll.config
+C:\Users\1570367\source\repos\PruebaGAPWebApi\PruebaGAPData\bin\Debug\PruebaGAPData.dll
+C:\Users\1570367\source\repos\PruebaGAPWebApi\PruebaGAPData\bin\Debug\PruebaGAPData.pdb
+C:\Users\1570367\source\repos\PruebaGAPWebApi\PruebaGAPData\bin\Debug\EntityFramework.dll
+C:\Users\1570367\source\repos\PruebaGAPWebApi\PruebaGAPData\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\1570367\source\repos\PruebaGAPWebApi\PruebaGAPData\bin\Debug\EntityFramework.xml
+C:\Users\1570367\source\repos\PruebaGAPWebApi\PruebaGAPData\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\1570367\source\repos\PruebaGAPWebApi\PruebaGAPData\obj\Debug\PruebaGAPData.csprojAssemblyReference.cache
+C:\Users\1570367\source\repos\PruebaGAPWebApi\PruebaGAPData\obj\Debug\PruebaGAPData.csproj.CoreCompileInputs.cache
+C:\Users\1570367\source\repos\PruebaGAPWebApi\PruebaGAPData\obj\Debug\PruebaGAPData.csproj.CopyComplete
+C:\Users\1570367\source\repos\PruebaGAPWebApi\PruebaGAPData\obj\Debug\PruebaGAPData.dll
+C:\Users\1570367\source\repos\PruebaGAPWebApi\PruebaGAPData\obj\Debug\PruebaGAPData.pdb
+C:\Users\1570367\source\repos\PruebaGAPWebApi\PruebaGAPData\bin\Debug\Newtonsoft.Json.dll
+C:\Users\1570367\source\repos\PruebaGAPWebApi\PruebaGAPData\bin\Debug\Newtonsoft.Json.xml

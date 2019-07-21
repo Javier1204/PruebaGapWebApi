@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c303e0a04b1e48acb5f36a232846c249" Name="Diagram1">
+        <EntityTypeShape EntityType="PRUEBA_GAP_DBModel.STUDENT" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PRUEBA_GAP_DBModel.STUDENT_SUBJECT" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PRUEBA_GAP_DBModel.SUBJECT" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <AssociationConnector Association="PRUEBA_GAP_DBModel.FK_STUDENT_SUBJECT_STUDENT" ManuallyRouted="false" />
+        <AssociationConnector Association="PRUEBA_GAP_DBModel.FK_STUDENT_SUBJECT_SUBJECT" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
